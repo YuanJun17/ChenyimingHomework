@@ -7,12 +7,15 @@ public class walk : MonoBehaviour
     public float walkspeed;
     private Rigidbody2D myrigidbody;
     private Animator myanim;
+    public Animation animation; // ¶¯»­×é¼þ
 
+    
     // Start is called before the first frame update
     void Start()
     {
         myrigidbody = GetComponent<Rigidbody2D>();
         myanim = GetComponent<Animator>();
+      
     }
 
     // Update is called once per frame
@@ -20,7 +23,7 @@ public class walk : MonoBehaviour
     {
         Walk();
         Filp();
-
+        
     }
     void Walk()
     {
@@ -29,6 +32,7 @@ public class walk : MonoBehaviour
         myrigidbody.velocity = playerVel;
         bool playerHasXAxisSpeed =Mathf.Abs(myrigidbody.velocity.x) > Mathf.Epsilon;
         myanim.SetBool("walk", playerHasXAxisSpeed);
+      
 
     }
     void Filp()
