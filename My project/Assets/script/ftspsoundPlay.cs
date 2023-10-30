@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class temp : MonoBehaviour
+public class ftspsoundPlay : MonoBehaviour
 {
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +15,8 @@ public class temp : MonoBehaviour
     {
         
     }
-    public void footstep()
+    public void footstep1()
     {
-        AudioSource sound= GetComponent<AudioSource>();
-
-        sound.Play();
+        AudioManager.instance.PlayFootstepSound1();
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class camfollow : MonoBehaviour
 {
     public Transform target; // 角色的Transform组件
     public float smoothSpeed = 0.125f; // 摄像机移动的平滑速度

@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class 场景切换 : MonoBehaviour
+public class change01 : MonoBehaviour
 {
+    private SceneSwitchCounterUI counterUI;
     // Start is called before the first frame update
     void Start()
     {
-        
+        counterUI = FindObjectOfType<SceneSwitchCounterUI>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,10 @@ public class 场景切换 : MonoBehaviour
         if (other.gameObject.CompareTag("Player")
             && other.GetType().ToString()=="UnityEngine.CapsuleCollider2D")
         {
-            SceneManager.LoadScene(1);
+            LoadManager.instance.Load1();
+            
+            LoadManager.instance.counttime();
+
         }
     }
 }
