@@ -7,17 +7,17 @@ public class UIController : MonoBehaviour
     public static UIController instance;
     public void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
+        //if (instance == null)
+        //{
+            //instance = this;
 
-        }
-        else if (instance == this)
-        {
-            Destroy(gameObject);
-        }
+        //}
+        //else if (instance != this)
+        //{
+            //Destroy(gameObject);
+        //}
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
     public Transform playerTransform; // ½ÇÉ«µÄ Transform
     public Transform uiTransform; // UIµÄ Transform
