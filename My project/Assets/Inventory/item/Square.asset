@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2452d375480334aae99f2b45f8718b, type: 3}
+  m_Name: Square
+  m_EditorClassIdentifier: 
+  itemName: Square
+  itemImage: {fileID: 21300000, guid: c2af475d8b91c494ba3ccda79c25c61d, type: 3}
+  itemHeld: 0
+  itemText: "\u8FD9\u662F\u65B9\u5757"

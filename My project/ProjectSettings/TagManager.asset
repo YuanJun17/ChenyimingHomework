@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ItemX
+  - ItemO
+  - ItemTriangle
+  - ItemSquare
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - door
   - player
   - camera
-  - 
+  - item
   - 
   - 
   - 
@@ -46,4 +50,7 @@ TagManager:
     locked: 0
   - name: fr
     uniqueID: 2216882121
+    locked: 0
+  - name: item
+    uniqueID: 761315499
     locked: 0
