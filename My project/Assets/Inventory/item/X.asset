@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: itemX
   itemImage: {fileID: 21300000, guid: 16323a7157caac147a6292e7b21892b0, type: 3}
-  itemHeld: 0
+  itemHeld: 3
   itemText: "\u8FD9\u662F\u53C9\u53C9"

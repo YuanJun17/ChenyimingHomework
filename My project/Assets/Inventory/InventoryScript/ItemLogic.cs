@@ -15,21 +15,25 @@ public class ItemLogic : MonoBehaviour
         if (!playerInventory.itemList.Contains(thisItem))
         {
             playerInventory.itemList.Add(thisItem);
-            InventoryManager.CreateNewItem(thisItem);
+            //InventoryManager.CreateNewItem(thisItem);
         }
         else
         {
             thisItem.itemHeld++;
         }
+        InventoryManager.RefreshItem();
     }
     public static void SpawnItemX(Vector3 spawnPosition)
     {
+
         GameObject itemX = Instantiate(Resources.Load("ItemXPrefab") as GameObject, spawnPosition, Quaternion.identity);
         ItemLogic itemXScript = itemX.GetComponent<ItemLogic>();
         if (itemXScript != null)
         {
             itemXScript.Reset();
         }
+        
+        
 
     }
 

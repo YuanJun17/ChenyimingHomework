@@ -26,6 +26,7 @@ public class CharaterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)  && GameManager.instance.ItemXCount <2 && GameManager.instance.hasItemXPickedUp)
         {
             DropItemX();
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && GameManager.instance.ItemOCount < 2 && GameManager.instance.hasItemOPickedUp)
@@ -94,6 +95,7 @@ public class CharaterController : MonoBehaviour
 
         ItemLogic.SpawnItemX(dropPosition);
         GameManager.instance.ItemXCount++;
+        
     }
     private void DropItemO()
     {

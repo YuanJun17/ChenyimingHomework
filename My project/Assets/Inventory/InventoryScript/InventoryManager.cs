@@ -15,12 +15,21 @@ public class InventoryManager : MonoBehaviour
 
     public void Awake()
     {
-        if (instance != null)
+        if (instance == null)
         {
-            Destroy(this);
+            instance = this;
+
         }
-        instance = this;
-   
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
+    private void OnEnable()
+    {
+        RefreshItem();
     }
 
     public static void CreateNewItem(Item item)
@@ -31,5 +40,18 @@ public class InventoryManager : MonoBehaviour
         newItem.slotImage.sprite = item.itemImage;
         newItem.slotIndex.text = item.itemHeld.ToString();
     }
+    public static void RefreshItem()
+    {
+        for (int i = 0; i < instance.slotGrid.transform.childCount; i++)
+        {
+            if (instance.slotGrid.transform.childCount == 0)
+                break;
+            Destroy(instance.slotGrid.transform.GetChild(i).gameObject);
+        }
 
+        for (int i = 0;i<instance.bag.itemList.Count;i++)
+        {
+            CreateNewItem(instance.bag.itemList[i]);
+        }
+    }
 }
